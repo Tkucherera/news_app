@@ -1,77 +1,60 @@
+{% extends 'base.html' %}
 {% load static %}
+{% static "images" as baseUrl %}
+<!-- start of page -->
+{% block content %}
 <!DOCTYPE html>
 <!--  top nav Created By CodingNepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'CSS/main.css' %}" type="text/css">
+    <title>index</title>
+    <link rel="stylesheet" href="{% static 'CSS/headlines_page.css' %}" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--<script src="{% static 'java/main.js' %}"></script>-->
+
   </head>
 
   <body>
-        <div class="white-space">
-            <nav>
-              <div class="menu-icon">
-                <span class="fas fa-bars"></span></div>
-                <a href="{% url 'index' %}"><div class="logo">
-                    Falcon Daily </div></a>
-                    <div class="nav-items">
-                        <li><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                       <!-- <li><a href="#">Sign Up</a></li>-->
-                    </div>
-                        <div class="search-icon">
-                            <span class="fas fa-search"></span></div>
-                            <div class="cancel-icon">
-                                <span class="fas fa-times"></span></div>
-                                <form action="{% url 'index' %}" method="POST">
-                                     {% csrf_token %}
-                                    <input type="search" class="search-data" placeholder="search" name="search" required>
-                                    <button type="submit" name="genius" class="fas fa-search"></button>
-                                </form>
-            </nav>
+  <!-- healines -->
+  <div class="headline">
+      Falconation Top Stories
+
+  </div>
+  <div class="gallery-container">
+          <div class="responsive">
+              <div class="gallery">
+                  <a target="_blank" href="img_forest.jpg">
+                  <img src="{% static 'images/test.jpg' %}" alt="Forest">
+                  </a>
+                  <div class="desc">Add a description of the image here</div>
+              </div>
         </div>
 
-        <!--footer-->
-        <div class="footer">&copy Tinashe Kucherera 2021
-            <!--<div>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-youtube"></a>
-            </div>-->
+      <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_lights.jpg">
+            <img src="{% static 'images/test.jpg' %}" alt="Northern Lights">
+            </a>
+            <div class="desc">
+                <div class="article-title"><a href="#">
+                    Mandated Coronavirus Testing</a>
+                </div>
+                 <div class="article-summery">Add a description of the image here</div>
+            </div>
         </div>
-        <script>
-            const menuBtn = document.querySelector(".menu-icon span");
-            const searchBtn = document.querySelector(".search-icon");
-            const cancelBtn = document.querySelector(".cancel-icon");
-            const items = document.querySelector(".nav-items");
-            const form = document.querySelector("form");
-            menuBtn.onclick = ()=>{
-              items.classList.add("active");
-              menuBtn.classList.add("hide");
-              searchBtn.classList.add("hide");
-              cancelBtn.classList.add("show");
-            }
-            cancelBtn.onclick = ()=>{
-              items.classList.remove("active");
-              menuBtn.classList.remove("hide");
-              searchBtn.classList.remove("hide");
-              cancelBtn.classList.remove("show");
-              form.classList.remove("active");
-              cancelBtn.style.color = "#ff3d00";
-            }
-            searchBtn.onclick = ()=>{
-              form.classList.add("active");
-              searchBtn.classList.add("hide");
-              cancelBtn.classList.add("show");
-            }
+      </div>
 
-          </script>
-
+      <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="{% static 'test.jpg' %}">
+            <img src="{% static 'images/test.jpg' %}" alt="Mountains">
+             </a>
+            <div class="desc">Add a description of the image here</div>
+          </div>
+      </div>
+      <div class="clearfix"></div>
+  </div>
   </body>
+{% endblock %}
 </html>

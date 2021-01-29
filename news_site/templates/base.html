@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <!--  top nav Created By CodingNepal -->
 <html lang="en" dir="ltr">
@@ -18,7 +19,7 @@
               <div class="menu-icon">
                 <span class="fas fa-bars"></span></div>
                 <a href="{% url 'index' %}"><div class="logo">
-                    Falcon Daily </div></a>
+                    The Falcon Gazette  </div></a>
                     <div class="nav-items">
                         <li><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About</a></li>
@@ -35,6 +36,7 @@
                                 </form>
             </nav>
         </div>
+        {% block content%} {% endblock %}
 
         <!--footer-->
         <div class="footer">&copy Tinashe Kucherera 2021

@@ -1,0 +1,104 @@
+/********************************
+This is the body of index.html
+Menu
+1.Headline
+2.News Gallery
+********************************/
+
+/****************
+1. headline
+*****************/
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+.headline {
+    text-align:center;
+    font-size: 50px;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+/*********************************
+2. News
+*********************************/
+.gallery-container {
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.gallery {
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-decoration: none;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 32.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/***********************
+3. inside description
+***********************/
+
+.article-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:20px;
+    font-family: ariel;
+    text-decoration: none;
+}
+
+.article-summary {
+    font-size: 14px;
+    font-family:TimesNewRoman;
+    text-decoration: none;
+    text-color: black;
+}
+
+.article-segment {
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 15px;
+}
+
+.article-segment:hover {
+  color: grey;
+}
