@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-{% static "images" as baseUrl %}
+{% static "media" as baseUrl %}
 <!-- start of page -->
 {% block content %}
-<!DOCTYPE html>
 <!--  top nav Created By CodingNepal -->
 <html lang="en" dir="ltr">
   <head>
@@ -14,47 +13,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
+  <style>
+      .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {
+    background-color: #e7e7e7;
+}
+  </style>
 
   <body>
-  <!-- healines -->
+  <!-- headlines -->
   <div class="headline">
       Falconation Top Stories
-
+  <!-- introduce a for loop-->
   </div>
-  <div class="gallery-container">
-          <div class="responsive">
-              <div class="gallery">
-                  <a target="_blank" href="img_forest.jpg">
-                  <img src="{% static 'images/test.jpg' %}" alt="Forest">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-              </div>
-        </div>
 
-      <div class="responsive">
+  <div class="gallery-container">
+      {% for article in articles %}
+          <div class="responsive">
         <div class="gallery">
-            <a target="_blank" href="img_lights.jpg">
-            <img src="{% static 'images/test.jpg' %}" alt="Northern Lights">
+            <a target="_blank" href="{{ article.image.url }}">
+            <img src="{{ article.image.url }}" alt="{{ article.name }}">
             </a>
             <div class="desc">
                 <div class="article-title"><a href="#">
-                    Mandated Coronavirus Testing</a>
+                    {{ article.name }}</a>
                 </div>
-                 <div class="article-summery">Add a description of the image here</div>
+                <div><a href="#" class="button button4">{{article.category}}</a></div>
+                 <div class="article-summery">{{article.summary}}</div>
             </div>
         </div>
       </div>
 
-      <div class="responsive">
-          <div class="gallery">
-            <a target="_blank" href="{% static 'test.jpg' %}">
-            <img src="{% static 'images/test.jpg' %}" alt="Mountains">
-             </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>
-      </div>
+      {% endfor %}
+
       <div class="clearfix"></div>
   </div>
+  {% endblock %}
   </body>
-{% endblock %}
+
 </html>
