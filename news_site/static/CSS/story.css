@@ -1,0 +1,52 @@
+/************************************************
+This file has css code for the story.html page
+************************************************/
+
+/******************************
+Menu
+1. Article heard /Name /date /editor /writer
+2. Article body
+3. related articles suggestions
+******************************/
+p {
+    margin-bottom: 20px;
+}
+
+.article-container {
+    width:60%;
+    margin:0 auto;
+}
+
+.article-name {
+    text-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.article-info {
+   text-size: 32px;
+   font-family: "Times New Roman", Times, serif;
+   color: #707070;
+   margin-bottom: 15px;
+
+}
+
+.article-image {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom:60px;
+}
+
+.article_body {
+  width: auto;
+  line-height:1.6;
+  align:center;
+  cursor: pointer;
+  height: 500px;
+  overflow: scroll;
+}

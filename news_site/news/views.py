@@ -13,4 +13,14 @@ def about(request):
 
 
 def story(request):
-    return render(request, 'story.html')
+    if request.method == 'GET':
+        value = int(request.GET.get('value'))
+        print(value)
+        article = Article.objects.get(id=value)
+        return render(request, 'story.html', {'article': article})
+
+    else:
+        return render(request, 'index.html')
+
+
+
