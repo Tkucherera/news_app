@@ -8,6 +8,7 @@ class Writer(models.Model):
     about = models.TextField()
     picture = models.ImageField(upload_to='images/')
     rating = models.DecimalField(max_digits=3, decimal_places=2)
+    num_ratings = models.IntegerField()
     num_articles = models.IntegerField()
 
 

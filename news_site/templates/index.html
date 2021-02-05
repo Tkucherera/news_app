@@ -52,13 +52,13 @@
           <div class="responsive">
         <div class="gallery">
             <a target="_blank" href="{{ article.image.url }}">
-            <img src="{{ article.image.url }}" alt="{{ article.name }}">
+            <img src="{{ article.image.url }}" alt="{{ article.name }}" style="height:300px;">
             </a>
             <div class="desc">
                 <div class="article-title"><a href= "story?value={{ article.id }}">
                     {{ article.name }}</a>
                 </div>
-                <div><a href="#" class="button button4">{{article.category}}</a></div>
+                <div><a href="#" class="button button4">{{article.category.name}}</a></div>
                  <div class="article-summery">{{article.summary}}</div>
             </div>
         </div>
