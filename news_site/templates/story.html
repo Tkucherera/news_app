@@ -51,7 +51,26 @@
             </form>
         </div>
 
+        <!--recommended articles-->
+        <div class="recommendation">
+            <h3>More articles for you</h3>
+        </div>
+        {% for recommendation in recommendations %}
+            {% if recommendation.name != article.name %}
+                <div class="line-border">
+                    <img class="rec-pic" src="{{ recommendation.image.url }}" />
+                    <div class="article-title"><a href= "story?value={{ recommendation.id }}">
+                            {{ recommendation.name }}</a>
+                    </div>
+                        <div><a href="#" class="button button4">{{recommendation.category.name}}</a></div>
+                         <div class="article-summery" style="line-height:1.6;">{{recommendation.summary}}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
     </div>
+
+
 {% endblock %}
 </body>
 </html>

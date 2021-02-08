@@ -87,3 +87,39 @@ Article rating
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+
+/*********************************
+recommendations
+*********************************/
+
+.recommendation {
+    margin-top: 60px;
+}
+.line-border {
+ border: 1px solid #000;
+ box-shadow: 5px 0px 5px 0px grey;
+ border-right: none;
+ border-left: none;
+ margin: auto;
+ margin-top: 5%;
+ margin-bottom: 5%; }
+
+
+.rec-pic{
+    float: right;
+    margin: 0px 0px 15px 0px;
+    height: 145px;
+    object-fit: cover;
+    width: 220px;
+}
+
+@media screen and (max-width: 600px) {
+    .rec-pic {
+    	height: 145px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+

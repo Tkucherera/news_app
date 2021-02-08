@@ -16,9 +16,10 @@ def about(request):
 def story(request):
     if request.method == 'GET':
         value = int(request.GET.get('value'))
-        print(value)
         article = Articles.objects.get(id=value)
-        return render(request, 'story.html', {'article': article})
+        recommendations = recon(article)
+        post = {'article': article, 'recommendations': recommendations}
+        return render(request, 'story.html', post)
 
     elif request.method == 'POST':
         article_id = request.POST['article']
@@ -52,6 +53,14 @@ def story(request):
     else:
         return render(request, 'index.html')
 
+
+# this function will get the stories that are most like the chosen article
+def recon(article):
+    category = article.category.id
+    # recommendation by category
+    rec_category = Articles.objects.all().filter(category=category)
+
+    return rec_category
 
 
 

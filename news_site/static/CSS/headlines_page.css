@@ -26,6 +26,7 @@ Menu
 
 .gallery {
   border: 1px solid #ccc;
+
 }
 
 .gallery:hover {
@@ -41,10 +42,12 @@ Menu
   padding: 15px;
   text-decoration: none;
 
+
 }
 
 * {
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .responsive {
