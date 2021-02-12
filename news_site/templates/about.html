@@ -1,17 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+
 {% block content %}
-<head>
-    <meta charset="UTF-8">
 
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'CSS/headlines_page.css' %}" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</head>
-<body>
 
     <div class="about-container">
         <div class="headline">
@@ -19,13 +10,22 @@
         </div>
 
         <!-- body content -->
-        <div>
+        <div class="article_body">
              <b>Falcon Gazette</b> a new and refreshed look at how news is delivered. Birthed in
             a Saint Augustine's University college dorm, the Falcon Gazette is the is the brain child
-            of several students from across disciplines.
+            of several students from across different disciplines. Our goal is the bring to you information
+            about everything to anything going on. We will be bringing you stories about:
+            <p>
+                <ul>
+                    <li>Student Affairs</li>
+                    <li>Wellness</li>
+                    <li>Entertainment</li>
+                    <li>Community Service</li>
+                    <li>OpEds</li>
+                    <li>Black Excellence </li>
+                </ul>
+            </p>
         </div>
 
     </div>
 {% endblock %}
-</body>
-</html>

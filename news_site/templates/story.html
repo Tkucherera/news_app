@@ -1,17 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'CSS/main.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'CSS/story.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'CSS/headlines_page.css' %}" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Title</title>
-</head>
-<body>
     <div class="article-container">
         <div class="article-name">
             <h1>{{article.name}}</h1>
@@ -72,5 +62,3 @@
 
 
 {% endblock %}
-</body>
-</html>
