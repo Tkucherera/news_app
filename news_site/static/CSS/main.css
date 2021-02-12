@@ -270,6 +270,13 @@ margin: 0 auto;
 
 }
 
+.about-container {
+width:80%;
+margin: 0 auto;
+
+}
+
+
 .white-space {
 padding-bottom: 40px;
 }
@@ -379,11 +386,11 @@ padding-bottom: 40px;
 .fa {
   padding: 20px;
   font-size: 20px;
-  width: 20px;
+  width: 40px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  border-radius: 50%;
+  border-radius: 80%;
 }
 
 .fa:hover {
@@ -392,22 +399,19 @@ padding-bottom: 40px;
 
 /* Set a specific color for each brand *//* Facebook */
 .fa-facebook {
- color: blue;
+ color: white;
 }
 
 /* Twitter */
 .fa-twitter {
-  background: #55ACEE;
   color: white;
 }
 
 .fa-youtube {
-  background: #bb0000;
   color: white;
 }
 
 .fa-instagram {
-  background: #125688;
   color: white;
 }
 

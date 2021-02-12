@@ -6,6 +6,8 @@ import math
 # Create your views here.
 def index(request):
     articles = Articles.objects.all
+    ratings = Articles.objects.values('rating')
+
     return render(request, 'index.html', {'articles': articles})
 
 
